@@ -31,7 +31,7 @@ const App = (props) => {
   const buyItem = item => {
     // dipsatch an action here to add an item
   };
-  
+  console.log('app', props);
   return (
     <div className="boxes">
       <div className="box">
@@ -47,11 +47,13 @@ const App = (props) => {
 };
 
 const mapStateToProps = state => {
+  console.log('mstp',state )
   return {
     additionalFeatures: state.AdditionalFeatures,
     additionalPrice: state.additionalPrice,
     car: state.car
   }
 }
+// console.log(App);
 
 export default connect(mapStateToProps, {})(App);
